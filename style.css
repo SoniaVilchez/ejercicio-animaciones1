@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    overflow: hidden;
+}
+.square {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(254, 120, 120);
+    position: absolute;
+    animation: zigzag 4s infinite linear, colorChange 4s infinite alternate;
+}
+@keyframes zigzag {
+    0% { transform: translateX(-200px) translateY(0) scale(1); }
+    25% { transform: translateX(-100px) translateY(50px) scale(1.2); }
+    50% { transform: translateX(0px) translateY(0) scale(1.5); }
+    75% { transform: translateX(100px) translateY(-50px) scale(1.2); }
+    100% { transform: translateX(200px) translateY(0) scale(1); }
+}
+@keyframes colorChange {
+    0% { background-color: rgb(254, 120, 120); }
+    25% { background-color: rgb(109, 109, 240); }
+    50% { background-color: rgb(110, 255, 110); }
+    75% { background-color: rgb(249, 249, 101); }
+    100% { background-color: rgb(254, 120, 120); }
+}
